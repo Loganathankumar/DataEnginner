@@ -1,0 +1,69 @@
+AutomatedIngestRawTransformation:
+  repo_base_path: !!python/str "os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))"
+  output_folder: !!python/str "output_transformation/"
+  create_output_folder: !!python/str:os.makedirs
+        - output_folder
+        - exist_ok: true
+  methods:
+
+    __init__:
+      parameters:
+        - source_file
+      body:
+        - self.source_file = source_file
+        - self.mapping_sheet = None
+
+    create_automated_transformation:
+      parameters:
+        output_folder: !!python/str "None"
+      body:
+        - if output_folder is None:
+            output_folder = self.output_folder
+        - Load source data:
+            if self.source_file.endswith('.csv'):
+              self.mapping_sheet = pd.read_csv(self.source_file)
+            elif self.source_file.endswith('.xlsx'):
+              self.mapping_sheet = !!python/object/apply:pandas.read_excel
+                  - self.source_file
+#      steps:
+#        - check_output_folder:
+#            condition:
+#              is_none: output_folder
+#            action:
+#              set_output_folder: self.output_folder
+#        - check_file_format:
+#            condition:
+#              ends_with: self.source_file, '.xlsx'
+#            action:
+#              load_mapping_sheet: pd.read_excel(self.source_file)
+#            else:
+#              raise_error: "Unsupported file format"
+#        - request_load_type:
+#            action:
+#              input_prompt: "Please enter the valid load type for transformation:"
+#              store_in: type_value
+#        - add_type_to_mapping_sheet:
+#            action:
+#              update_column:
+#                column_name: 'type'
+#                value: type_value
+#                source_data: self.mapping_sheet
+#        - save_to_csv:
+#            action:
+#              to_csv:
+#                filename: 'cts_ingest_to_raw_config.csv'
+#                index_option: false
+#                source_data: cols_data
+#        - iterate_file_names:
+#            for_each_file_name_in_unique_list:
+#              source_data: cols_data['File Name and Extension'].dropna().unique().tolist()
+#              actions:
+#                - get_column_names:
+#                    source_data: cols_data.loc[cols_data['File Name and Extension'] == name].iloc[:, 1].dropna().tolist()
+#                    print_column_names_action: print(column_names)
+#                - create_transformation_string:
+#                    transformation_string_from_name: name.split('.')[0]
+#                    transform_name_formatting_action:
+#                      set_transform_name_to: "Raw_" + source_name.upper() + '_' + transformation_string.lower()
+#                    require_name_formatting_action:
+#                      set_require_name_to: "Ingested_" + source_name.upper() + '_' + transformation_string.lower()

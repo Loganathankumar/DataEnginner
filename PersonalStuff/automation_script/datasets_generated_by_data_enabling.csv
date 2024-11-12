@@ -1,0 +1,12 @@
+DatasetName,Zone,Frequency,SnapshotDateDay,MonitoringDateOffsetFromSnapshotDate,MonitoringExpectedTime,Priority,FileType,databricks_cluster_size,Switch_Pipeline_Name
+AFM/ListOfInvestmentFundKvk,Datamodel,adhoc,,,,,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+AccessTools/AtTmuAt,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_E32_v3,PL_Run_CTS_From_Data_Engg
+AccessTools/AtTmuBoundDevice,Datamodel,monthly,first_day,1,06:00,Low,F,,PL_Run_CTS_From_Data_Engg
+AccessTools/AtTmuChipcard,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/ClientGroupCode,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/Country,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/EnterpriseProductHierarchy,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/EntityLegalForm,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/CountryEnhanced,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,
+Andes/SBICode,Datamodel,weekly,Mon~Tue~Wed~Thu~Fri~Sat~Sun,0,06:00,Low,F,Standard_DS4_v2,PL_Run_CTS_From_Data_Engg
+Andes/SBIEnhanced,Datamodel,adhoc,,,,,F,Standard_D16s_v3,PL_Run_CTS_From_Data_Engg

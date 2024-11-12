@@ -1,0 +1,4 @@
+REF_ID,payment_date,ORIG,BENEF,FEATURE1,FEATURE1_Score,FEATURE2,FEATURE2_Score,FEATURE3,FEATURE3_Score,FEATURE4,FEATURE4_Score,FEATURE5,FEATURE5_Score,group,total_score,ALERT_KEY,alert_top_feat1,top1_Score,top2feature,top2_score,top3_feature,top3_Score
+trxn1,23-08-2020,Mark,Jack,incoming,4,frgn,5,highrisk,3,f2,4,,4,1,20,Mark,frgn,5,incoming,4,highrisk,
+trxn2,23-09-2020,jack,mark,outgoing,3,local,3,lowrisk,4,f8,5,,5,1,20,Mark,frgn,5,incoming,4,highrisk,
+trxn3,23-10-2020,Ben,tom,f23,3,f2,2,f2,2,f2,2,,2,2,11,Ben,f1,3,f2,2,,

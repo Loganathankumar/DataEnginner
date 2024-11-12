@@ -1,0 +1,9 @@
+
+Ingested_SABFR_sabfr_cust_party_to_party_v2:
+  file_type: parquet
+  path: dbfs:/mnt/ingested/SABFR/sabfr_cust_party_to_party_v2/$(ingested_suffix_path)
+  read_partition: none
+Raw_SABFR_sabfr_cust_party_to_party_v2:
+  file_type: delta
+  path: dbfs:/mnt/raw/SABFR/sabfr_cust_party_to_party_v2
+  read_partition: none

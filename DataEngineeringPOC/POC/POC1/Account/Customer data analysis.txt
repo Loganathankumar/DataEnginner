@@ -1,0 +1,18 @@
+1. create two case classes 
+  case class CustomerData(
+                          customerId: String,
+                          forename: String,
+                          surname: String
+                        )
+
+  case class AccountData(
+                          customerId: String,
+                          accountId: String,
+                          balance: Long
+                        )
+2. read customer and account CSV data to Datasets of above case classes
+3. Analise and aggregate below queries:
+   3.1 For each customer find total number of accounts associated 
+   3.2 Find customers who has more than 2 accounts 
+        output should include customerId,forename,surname,NoOfacounts
+   3.3 Display top 5 customer with highest account balance

@@ -1,0 +1,19 @@
+Sales Dataset:
+1. Read csv sales data using spark, and create Dataframe
+2. Impose below specified schema DF while reading csv
+3. Region : String
+   Country : String
+   ItemType : String
+   SalesChannel: String
+   OrderPriority : String
+   OrderDate: Date (dd/mm/yy)
+   OrderID:Long
+   UnitsSold:Double
+   UnitPrice :Double
+   TotalRevenue:Double
+   TotalProfit:Double
+4. Calculate below aggregations 
+   4.1 Total revenue per region
+   4.2 Top 5 countries where highest Household units are sold 
+   4.3 Total profile in 'Asia' region from 2011 to 2015
+5. write the output to CSV file

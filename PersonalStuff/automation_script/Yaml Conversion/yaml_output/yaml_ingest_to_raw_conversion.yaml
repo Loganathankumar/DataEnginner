@@ -1,0 +1,8 @@
+transform:
+  name: ''
+  owner: \"mail_car_caap_data_enabling@nl.abnamro.com\
+  requires:
+  - ''
+  write_partition: !!set
+    '{write_partition}': null
+  write_type: '{write_type}'

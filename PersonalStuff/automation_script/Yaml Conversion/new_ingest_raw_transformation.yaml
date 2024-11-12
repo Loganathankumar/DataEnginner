@@ -1,0 +1,36 @@
+AutomatedIngestRawTransformation:
+  repo_base_path: !!python/str "os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))"
+  output_folder: !!python/str "output_transformation/"
+  methods:
+
+    __init__:
+      parameters:
+        - source_file
+      body:
+        - self.source_file = source_file
+        - self.mapping_sheet = None
+
+    create_automated_transformation:
+      parameters:
+        - output_folder: !!python/str "None"
+      body: [
+        { if output_folder is None: "output_folder = self.output_folder" },
+        { if self.source_file.endswith('.csv'): "self.mapping_sheet = pd.read_csv(self.source_file)" },
+        { elif self.source_file.endswith('.xlsx'): "self.mapping_sheet = pd.read_excel(self.source_file)" },
+        { else: "raise ValueError(" },
+
+        { type_value = input("Please enter the valid load type for transformation: ("},
+        { source_name = input("Please enter the valid source name for transformation: (" },
+        - self.mapping_sheet['type'] = type_value,
+        - self.mapping_sheet['source_name'] = source_name.upper(),
+        - cols_data = self.mapping_sheet,
+        - cols_data.to_csv('cts_ingest_to_raw_config.csv', index=False)
+
+        - for name in cols_data['File Name and Extension'].dropna().unique().tolist():
+          - column_names = cols_data.loc[ cols_data[ 'File Name and Extension' ] == name ].iloc[ :, 1 ].dropna().tolist()
+
+      ]
+
+
+
+
