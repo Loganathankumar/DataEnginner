@@ -1,6 +1,7 @@
-**Fabric-Analysis**
-**
-Microsoft Fabric, the cutting-edge technology transforming the data landscape! **
+***Fabric-Analysis***
+
+
+**Microsoft Fabric, the cutting-edge technology transforming the data landscape!**
 
 <img width="603" height="300" alt="image" src="https://github.com/user-attachments/assets/f9336db9-722f-4afc-8f41-3bc78ea0c046" />
 
