@@ -80,7 +80,8 @@ Create a boxplot to visually compare the distribution of monthly charges between
 
 # Boxplot for visualizing the distribution of Monthly Charges by Churn
 plt.figure(figsize=(10, 6))
-sns.boxplot(x='Churn', y='MonthlyCharges', data=telco_df, palette='Set2')
+sns.boxplot(x='Churn', y='MonthlyCharges', hue='Churn', data=telco_df,
+            palette='Set2', legend=False)
 plt.title('Monthly Charges Distribution by Churn Status')
 plt.show()
 
