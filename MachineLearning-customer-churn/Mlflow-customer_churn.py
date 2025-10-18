@@ -73,6 +73,16 @@ sns.pairplot(telco_pnv, hue='Churn', diag_kind='kde')
 plt.suptitle('Pairplot for Telco Dataset', y=1.02)
 plt.show()
 
+"""
+3. Boxplot for Monthly Charges by Churn:
+Create a boxplot to visually compare the distribution of monthly charges between customers who churned and those who didn't.
+"""
+
+# Boxplot for visualizing the distribution of Monthly Charges by Churn
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Churn', y='MonthlyCharges', data=telco_df, palette='Set2')
+plt.title('Monthly Charges Distribution by Churn Status')
+plt.show()
 
 
 
