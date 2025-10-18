@@ -29,7 +29,7 @@ data_types = {
 
 # Step 1: Read all as string
 telco_df = pd.read_csv(
-    r"C:\Users\mural\Downloads\telco-customer-churn-missing.csv",
+    r"telco-customer-churn-missing.csv",
     dtype=data_types,
     sep=","
 )
