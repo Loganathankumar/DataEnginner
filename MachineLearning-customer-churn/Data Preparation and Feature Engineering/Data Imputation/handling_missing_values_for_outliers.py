@@ -35,4 +35,4 @@ def calculate_missing(df, show=True):
     return transposed
 
 # Now call it
-missing_df = calculate_missing(telco_no_outliers_df)
+# missing_df = calculate_missing(telco_no_outliers_df)
