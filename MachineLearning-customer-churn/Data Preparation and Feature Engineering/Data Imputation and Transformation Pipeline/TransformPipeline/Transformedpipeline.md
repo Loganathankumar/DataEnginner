@@ -24,7 +24,7 @@ One-hot encoding creates a binary/dummy feature for each category in each catego
 
 In the example below, the feature **Animal** is split into three binary features &mdash; one for each value in **Animal**. Each binary feature's value is equal to 1 if its respective category value is present in **Animal** for each row. If its category value is not present in the row, the binary feature's value will be 0.
 
-![one-hot-encoding]("C:\Users\mural\Downloads\one-hot-encoding.png")
+![one-hot-encoding](https://github.com/Loganathankumar/DataEnginner/blob/main/MachineLearning-customer-churn/Data%20Preparation%20and%20Feature%20Engineering/Data%20Imputation%20and%20Transformation%20Pipeline/TransformPipeline/one-hot-encoding.png)
 
 #### One-hot encoding in Spark MLlib
 
